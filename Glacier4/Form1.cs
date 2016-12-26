@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
 
+using ESRI.ArcGIS.GeoAnalyst;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.Geometry;
@@ -378,6 +379,37 @@ namespace Glacier4
             
         }
 
+        public IRasterDataset getRasterData(string rasterfile)
+        {
+            string LayerName = "Karuola-" + rasterfile;
+
+            IWorkspaceFactory workspaceFactory = new RasterWorkspaceFactory();
+            IWorkspace workspace;
+            workspace = workspaceFactory.OpenFromFile(datadir, 0); //inPath栅格数据存储路径
+            IRasterWorkspace rastWork = (IRasterWorkspace)workspace;
+            IRasterDataset rasterDatst;
+            rasterDatst = rastWork.OpenRasterDataset(rasterfile);//inName栅格文件名
+
+            return rasterDatst;
+        }
+
+        public Raster buildSlope(string testfile= "LT51380402008016BKT00_B2.TIF")
+        {
+            IRasterDataset rasterD = new RasterDataset();
+
+            rasterD = getRasterData(testfile);
+            //create a RasterSurfaceOp operator
+            ISurfaceOp2 surOp = new RasterSurfaceOp() as ISurfaceOp2;
+            IGeoDataset geoD = rasterD as IGeoDataset;
+            Raster oRaster = new Raster();
+
+            //进行计算
+            oRaster = surOp.Slope(geoD, esriGeoAnalysisSlopeEnum.esriGeoAnalysisSlopeDegrees, null) as Raster;
+
+            //返回
+            return oRaster;
+        }
+
         /*-------------------------Functions End-------------------------*/
         #endregion
         public Form1()
@@ -709,6 +741,15 @@ namespace Glacier4
         private void btnReload_Click(object sender, EventArgs e)
         {
             loadData(label1.Text);
+        }
+
+        private void slopeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IRasterLayer pRasterLayer = new RasterLayer();
+            IRaster raster = new Raster();
+            raster = buildSlope();
+            pRasterLayer.CreateFromRaster(raster);
+            axMapControl1.AddLayer(pRasterLayer, 0);
         }
     }
 }

@@ -57,6 +57,7 @@
             this.btnTop = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
+            this.slopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axTOCControl1)).BeginInit();
@@ -83,7 +84,7 @@
             this.AboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1048, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1048, 25);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,9 +94,10 @@
             this.calcAreaToolStripMenuItem,
             this.compareToolStripMenuItem,
             this.openRasterCalcToolStripMenuItem,
-            this.settingsToolStripMenuItem});
+            this.settingsToolStripMenuItem,
+            this.slopeToolStripMenuItem});
             this.functionsToolStripMenuItem.Name = "functionsToolStripMenuItem";
-            this.functionsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.functionsToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.functionsToolStripMenuItem.Text = "开始";
             // 
             // calcAreaToolStripMenuItem
@@ -109,7 +111,7 @@
             // shapefileToolStripMenuItem
             // 
             this.shapefileToolStripMenuItem.Name = "shapefileToolStripMenuItem";
-            this.shapefileToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.shapefileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.shapefileToolStripMenuItem.Text = "Shapefile";
             this.shapefileToolStripMenuItem.Click += new System.EventHandler(this.shapefileToolStripMenuItem_Click);
             // 
@@ -139,13 +141,13 @@
             this.mapToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fullExtentToolStripMenuItem});
             this.mapToolStripMenuItem1.Name = "mapToolStripMenuItem1";
-            this.mapToolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
+            this.mapToolStripMenuItem1.Size = new System.Drawing.Size(68, 21);
             this.mapToolStripMenuItem1.Text = "地图操作";
             // 
             // fullExtentToolStripMenuItem
             // 
             this.fullExtentToolStripMenuItem.Name = "fullExtentToolStripMenuItem";
-            this.fullExtentToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.fullExtentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fullExtentToolStripMenuItem.Text = "全图显示";
             this.fullExtentToolStripMenuItem.Click += new System.EventHandler(this.fullExtentToolStripMenuItem_Click_1);
             // 
@@ -155,20 +157,20 @@
             this.glacier4ToolStripMenuItem,
             this.cDIOToolStripMenuItem});
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.AboutToolStripMenuItem.Text = "关于";
             // 
             // glacier4ToolStripMenuItem
             // 
             this.glacier4ToolStripMenuItem.Name = "glacier4ToolStripMenuItem";
-            this.glacier4ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.glacier4ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.glacier4ToolStripMenuItem.Text = "冰川演变展示系统";
             this.glacier4ToolStripMenuItem.Click += new System.EventHandler(this.glacier4ToolStripMenuItem_Click);
             // 
             // cDIOToolStripMenuItem
             // 
             this.cDIOToolStripMenuItem.Name = "cDIOToolStripMenuItem";
-            this.cDIOToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.cDIOToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.cDIOToolStripMenuItem.Text = "工程实践";
             this.cDIOToolStripMenuItem.Click += new System.EventHandler(this.cDIOToolStripMenuItem_Click);
             // 
@@ -335,6 +337,13 @@
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
+            // slopeToolStripMenuItem
+            // 
+            this.slopeToolStripMenuItem.Name = "slopeToolStripMenuItem";
+            this.slopeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.slopeToolStripMenuItem.Text = "slope";
+            this.slopeToolStripMenuItem.Click += new System.EventHandler(this.slopeToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -404,6 +413,7 @@
         private System.Windows.Forms.PictureBox picCalc;
         private System.Windows.Forms.Button btnRmvThis;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.ToolStripMenuItem slopeToolStripMenuItem;
     }
 }
 
