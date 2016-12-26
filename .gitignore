@@ -50,4 +50,6 @@ Temporary Items
 Data
 bin
 obj
-.vs
+.vs/
+/.vs
+.vs/Glacier4/v14/.suo
