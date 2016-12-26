@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glacier4", "Glacier4\Glacier4.csproj", "{CAD6F3A4-1B1E-411C-BD08-7016F7036BFF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glacier4_Exam", "Glacier4_Exam\Glacier4_Exam.csproj", "{223822B4-CB73-4E3F-AFED-662B3F7E42EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +21,6 @@ Global
 		{CAD6F3A4-1B1E-411C-BD08-7016F7036BFF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CAD6F3A4-1B1E-411C-BD08-7016F7036BFF}.Release|x86.ActiveCfg = Release|x86
 		{CAD6F3A4-1B1E-411C-BD08-7016F7036BFF}.Release|x86.Build.0 = Release|x86
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Debug|x86.Build.0 = Debug|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Release|x86.ActiveCfg = Release|Any CPU
-		{223822B4-CB73-4E3F-AFED-662B3F7E42EC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
